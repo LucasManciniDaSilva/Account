@@ -18,7 +18,8 @@ namespace Account
 
             //instantiated a Class
             Business b1 = new Business();
-
+            
+            //Continue the interaction with the user
             Console.WriteLine("Your Balance: " +b1.Balance);
             Console.WriteLine("Your loan limit: " +b1.LoanLimit);
             Console.WriteLine("Status: " + b1.Status);
