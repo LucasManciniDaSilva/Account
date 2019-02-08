@@ -1,6 +1,8 @@
 ﻿using System;
 namespace Account.Entities.Enum
 {
+
+    //Created the Operation status
     public enum Operation : int
     {
         Cheking = 0,

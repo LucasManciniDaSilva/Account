@@ -3,11 +3,14 @@ using System.Text;
 using Account.Entities.Enum;
 namespace Account.Entities
 {
+    //Created the SubClass Business Account
     public class Business : Normal
     {
+        //Defined the variables
         public double LoanLimit { get; set; }
         public Operation Status { get; set; }
 
+        //Created the constructor without arguments
         public Business()
         {
             Balance = 500;
@@ -15,13 +18,13 @@ namespace Account.Entities
             Status = Operation.Ready;
         }
 
-
+        //Created the constructor with arguments
         public Business(int number, string holder, double balance, double loanLimit, Operation status) : base(number, holder, balance)
         {
             Status = status;
         }
 
-       
+       //Created a method to Loan an amount
         public void Loan(double amount)
         {
             if (amount <= LoanLimit)
@@ -35,6 +38,8 @@ namespace Account.Entities
                 Status = Operation.Canceled;
             }
         }
+
+            //Converted a class to a String
             public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
