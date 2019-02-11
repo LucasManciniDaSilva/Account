@@ -24,7 +24,20 @@ namespace Account.Entities
             Status = status;
         }
 
-       //Created a method to Loan an amount
+        public override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 100.00;
+        }
+
+        public override void Deposit(double amount)
+        {
+            base.Deposit(amount);
+            Balance += 100.00;
+        }
+
+
+        //Created a method to Loan an amount
         public void Loan(double amount)
         {
             if (amount <= LoanLimit)

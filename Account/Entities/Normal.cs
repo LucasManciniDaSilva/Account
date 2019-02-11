@@ -22,13 +22,13 @@ namespace Account.Entities
             Balance = balance;
         }
         //Created a method to Withdraw a amount
-        public void Withdraw(double amount)
+        public virtual void  Withdraw(double amount)
         {
             Balance -= amount;
             
         }
         //Created a method to Deposit a amount
-        public void Deposit(double amount)
+        public virtual void Deposit(double amount)
         {
             Balance += amount;
         }
